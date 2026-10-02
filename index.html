@@ -82,8 +82,8 @@ button:hover{transform:translateY(-2px) scale(1.02)}
 
     <h2>Can I get a little forgiveness? 🥺</h2>
     <div class="buttons">
-      <button class="yes" onclick="yesClicked()">💕 Yes, I forgive you</button>
-      <button class="no" onclick="showSecond()">😤 Not yet</button>
+      <button type="button" class="yes" onclick="yesClicked()">💕 Yes, I forgive you</button>
+      <button type="button" class="no" onclick="showSecond()">😤 Not yet</button>
     </div>
 
     <div class="footer">
@@ -152,12 +152,22 @@ function yesClicked(){
   celebrate();
 }
 function showSecond(){
-  document.getElementById("screen1").classList.remove("active");
-  document.getElementById("screen2").classList.add("active");
+  const first = document.getElementById("screen1");
+  const second = document.getElementById("screen2");
+  first.classList.remove("active");
+  first.style.display = "none";
+  second.classList.add("active");
+  second.style.display = "block";
+  window.scrollTo({top:0, behavior:"smooth"});
 }
 function goBack(){
-  document.getElementById("screen2").classList.remove("active");
-  document.getElementById("screen1").classList.add("active");
+  const first = document.getElementById("screen1");
+  const second = document.getElementById("screen2");
+  second.classList.remove("active");
+  second.style.display = "none";
+  first.classList.add("active");
+  first.style.display = "block";
+  window.scrollTo({top:0, behavior:"smooth"});
 }
 function choose(n){
   const r=document.getElementById("result");

@@ -6,184 +6,58 @@
 <title>I'm Sorry, Mrs Naaz ❤️</title>
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;
-  background:linear-gradient(135deg,#ffd6e7,#ffeef5,#ffdbe9);
-  display:flex;align-items:center;justify-content:center;padding:20px;
-  overflow-x:hidden;color:#5a3042
-}
-.card{
-  width:min(680px,100%);background:rgba(255,255,255,.94);
-  border-radius:28px;padding:34px 28px;box-shadow:0 18px 50px rgba(166,65,104,.18);
-  text-align:center;position:relative;z-index:2
-}
+body{margin:0;min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5,#ffdbe9);display:flex;
+align-items:center;justify-content:center;padding:20px;overflow-x:hidden;color:#5a3042}
+.card{width:min(680px,100%);background:rgba(255,255,255,.96);border-radius:28px;
+padding:34px 28px;box-shadow:0 18px 50px rgba(166,65,104,.18);text-align:center;position:relative;z-index:2}
 .heart{font-size:64px;animation:beat 1.25s infinite}
 @keyframes beat{50%{transform:scale(1.13)}}
 h1{margin:8px 0 10px;color:#d94d7c;font-size:clamp(30px,7vw,46px)}
 h2{color:#d94d7c;margin:10px 0 8px}
 .subtitle{font-size:17px;line-height:1.6}
-.letter{
-  margin:22px 0;padding:22px;text-align:left;background:#fff6fa;
-  border:2px dashed #f3a9c4;border-radius:20px;line-height:1.75;font-size:16px
-}
+.letter{margin:22px 0;padding:22px;text-align:left;background:#fff6fa;border:2px dashed #f3a9c4;
+border-radius:20px;line-height:1.75;font-size:16px}
 .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
-button{
-  border:0;border-radius:999px;padding:14px 22px;font-size:16px;font-weight:700;
-  cursor:pointer;transition:.2s;box-shadow:0 7px 16px rgba(180,73,111,.15)
-}
-button:hover{transform:translateY(-2px) scale(1.02)}
-.yes{background:#ff8fb3;color:white}
-.no{background:#ffe0ea;color:#9b4565}
-.option{display:block;width:min(520px,100%);margin:12px auto;background:#fff;color:#704052;border:2px solid #f4bfd0}
-.option:hover{background:#fff0f5}
-.result{
-  margin-top:18px;padding:17px;border-radius:18px;background:#fff0f5;
-  font-weight:700;line-height:1.6;min-height:20px
-}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:999px;padding:14px 22px;
+font-size:16px;font-weight:700;cursor:pointer;transition:.2s;box-shadow:0 7px 16px rgba(180,73,111,.15)}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.yes{background:#ff8fb3;color:white}.no{background:#ffe0ea;color:#9b4565}
+.option{display:block;width:min(520px,100%);margin:12px auto;background:#fff;color:#704052;
+border:2px solid #f4bfd0}.option:hover{background:#fff0f5}
 .footer{margin-top:22px;font-size:13px;color:#a16b80}
-.screen{display:none}.screen.active{display:block}
-.back{margin-top:18px;background:transparent;box-shadow:none;color:#b85b7b}
-.confetti{position:fixed;top:-20px;font-size:20px;animation:fall 4s linear forwards;z-index:5;pointer-events:none}
-@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
-.float-heart{position:fixed;bottom:-30px;font-size:24px;animation:float 6s linear infinite;opacity:.55}
+.back{margin-top:18px;background:transparent;color:#b85b7b}
+.float-heart{position:fixed;bottom:-30px;font-size:24px;animation:float 6s linear infinite;opacity:.55;z-index:1}
 @keyframes float{to{transform:translateY(-110vh) translateX(80px);opacity:0}}
 </style>
 </head>
 <body>
 <div class="card">
-
-  <section id="screen1" class="screen active">
-    <div class="heart">❤️</div>
-    <h1>I'm Sorry, Mrs Naaz 🥺</h1>
-    <p class="subtitle">
-      Hello madam... yes, it's me. <b>Saurav 😭</b><br>
-      I have come here to officially say <b>SORRY.</b>
-    </p>
-
-    <div class="letter">
-      <p><b>Dear Mrs Naaz,</b></p>
-      <p>
-        I'm sorry that I wasn't able to understand you properly.
-        I know that must have hurt you, and I really didn't mean to make
-        you feel that way.
-      </p>
-      <p>
-        Sometimes my brain takes a little longer to understand things...
-        basically it needs a software update 😂😭
-      </p>
-      <p>
-        But I do care about you. A lot. I want to listen better,
-        understand you better, and not make the same mistake again.
-      </p>
-      <p>
-        So please accept this very serious apology from Saurav. ❤️
-      </p>
-    </div>
-
-    <h2>Can I get a little forgiveness? 🥺</h2>
-    <div class="buttons">
-      <button type="button" class="yes" onclick="yesClicked()">💕 Yes, I forgive you</button>
-      <button type="button" class="no" onclick="showSecond()">😤 Not yet</button>
-    </div>
-
-    <div class="footer">
-      Website made by Saurav himself 😌<br>
-      Coding skill: questionable. Sorry level: 100%. 😂
-    </div>
-  </section>
-
-  <section id="screen2" class="screen">
-    <div class="heart">😤</div>
-    <h1>NOT YET?! 😭</h1>
-    <p class="subtitle">
-      Okay okay... Mrs Naaz has rejected Saurav's first apology application. 🥲
-    </p>
-
-    <div class="letter">
-      <p><b>Emergency meeting has been called... 🚨</b></p>
-      <p>
-        Saurav has decided to try one more time before the situation gets
-        completely out of control. 😂
-      </p>
-    </div>
-
-    <h2>Choose Saurav's punishment 👇</h2>
-
-    <button class="option" onclick="choose(1)">🌸 Say "I'm sorry" 10 times</button>
-    <button class="option" onclick="choose(2)">🍫 Buy Mrs Naaz chocolate</button>
-    <button class="option" onclick="choose(3)">😂 Accept that Mrs Naaz is always right</button>
-
-    <div id="result" class="result"></div>
-    <button class="back" onclick="goBack()">← Go back</button>
-  </section>
-
+<div class="heart">❤️</div>
+<h1>I'm Sorry, Mrs Naaz 🥺</h1>
+<p class="subtitle">Hello madam... yes, it's me. <b>Saurav 😭</b><br>
+I have come here to officially say <b>SORRY.</b></p>
+<div class="letter">
+<p><b>Dear Mrs Naaz,</b></p>
+<p>I'm sorry that I wasn't able to understand you properly. I know that must have hurt you,
+and I really didn't mean to make you feel that way.</p>
+<p>Sometimes my brain takes a little longer to understand things...
+basically it needs a software update 😂😭</p>
+<p>But I do care about you. A lot. I want to listen better, understand you better,
+and not make the same mistake again.</p>
+<p>So please accept this very serious apology from Saurav. ❤️</p>
 </div>
-
-<script>
-function celebrate(){
-  const emojis=["❤️","💕","💗","🌸","✨","🥺"];
-  for(let i=0;i<28;i++){
-    const e=document.createElement("div");
-    e.className="confetti";
-    e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
-    e.style.left=Math.random()*100+"vw";
-    e.style.animationDelay=Math.random()*1.2+"s";
-    document.body.appendChild(e);
-    setTimeout(()=>e.remove(),5000);
-  }
-}
-function yesClicked(){
-  document.getElementById("screen1").innerHTML=`
-    <div class="heart">😭❤️</div>
-    <h1>SHE FORGAVE ME!!!</h1>
-    <div class="letter">
-      <p><b>Mrs Naaz,</b></p>
-      <p>You have officially saved Saurav's life. 😂</p>
-      <p>Thank you ❤️</p>
-      <p>
-        I promise I'll try harder to understand you, listen properly
-        and be there for you.
-      </p>
-      <p style="text-align:center;font-size:30px">🫂❤️</p>
-    </div>
-    <h2>Distance can't stop the love. ❤️</h2>
-    <p class="subtitle">One very big virtual hug is on its way to you. 🥺💕</p>
-  `;
-  celebrate();
-}
-function showSecond(){
-  const first = document.getElementById("screen1");
-  const second = document.getElementById("screen2");
-  first.classList.remove("active");
-  first.style.display = "none";
-  second.classList.add("active");
-  second.style.display = "block";
-  window.scrollTo({top:0, behavior:"smooth"});
-}
-function goBack(){
-  const first = document.getElementById("screen1");
-  const second = document.getElementById("screen2");
-  second.classList.remove("active");
-  second.style.display = "none";
-  first.classList.add("active");
-  first.style.display = "block";
-  window.scrollTo({top:0, behavior:"smooth"});
-}
-function choose(n){
-  const r=document.getElementById("result");
-  if(n===1) r.innerHTML='😭 Okay... I\\'m sorry x10! ❤️<br>1... 2... 3... 4... 5... 6... 7... 8... 9... 10! 🥺';
-  if(n===2) r.innerHTML='🍫 Punishment accepted! One chocolate has officially been added to Saurav\\'s debt. 😂❤️';
-  if(n===3) r.innerHTML='😂 WAIT... THIS WAS A TRAP! Fine fine... Mrs Naaz is always right. 😭❤️ Happy now? 🥺';
-  celebrate();
-}
-for(let i=0;i<8;i++){
-  const h=document.createElement("div");
-  h.className="float-heart";
-  h.textContent="♡";
-  h.style.left=(Math.random()*100)+"vw";
-  h.style.animationDelay=(Math.random()*6)+"s";
-  document.body.appendChild(h);
-}
-</script>
+<h2>Can I get a little forgiveness? 🥺</h2>
+<div class="buttons">
+<a class="btn yes" href="forgiven.html">💕 Yes, I forgive you</a>
+<a class="btn no" href="notyet.html">😤 Not yet</a>
+</div>
+<div class="footer">Website made by Saurav himself 😌<br>
+Coding skill: questionable. Sorry level: 100%. 😂</div>
+</div>
+<div class="float-heart" style="left:10%;animation-delay:0s">♡</div>
+<div class="float-heart" style="left:30%;animation-delay:2s">♡</div>
+<div class="float-heart" style="left:55%;animation-delay:4s">♡</div>
+<div class="float-heart" style="left:80%;animation-delay:1s">♡</div>
 </body>
 </html>

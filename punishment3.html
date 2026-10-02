@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mrs Naaz Is Always Right 😂</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5,#ffdbe9);display:flex;
+align-items:center;justify-content:center;padding:20px;overflow-x:hidden;color:#5a3042}
+.card{width:min(680px,100%);background:rgba(255,255,255,.96);border-radius:28px;
+padding:34px 28px;box-shadow:0 18px 50px rgba(166,65,104,.18);text-align:center;position:relative;z-index:2}
+.heart{font-size:64px;animation:beat 1.25s infinite}
+@keyframes beat{50%{transform:scale(1.13)}}
+h1{margin:8px 0 10px;color:#d94d7c;font-size:clamp(30px,7vw,46px)}
+h2{color:#d94d7c;margin:10px 0 8px}
+.subtitle{font-size:17px;line-height:1.6}
+.letter{margin:22px 0;padding:22px;text-align:left;background:#fff6fa;border:2px dashed #f3a9c4;
+border-radius:20px;line-height:1.75;font-size:16px}
+.buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:999px;padding:14px 22px;
+font-size:16px;font-weight:700;cursor:pointer;transition:.2s;box-shadow:0 7px 16px rgba(180,73,111,.15)}
+.btn:hover{transform:translateY(-2px) scale(1.02)}
+.yes{background:#ff8fb3;color:white}.no{background:#ffe0ea;color:#9b4565}
+.option{display:block;width:min(520px,100%);margin:12px auto;background:#fff;color:#704052;
+border:2px solid #f4bfd0}.option:hover{background:#fff0f5}
+.footer{margin-top:22px;font-size:13px;color:#a16b80}
+.back{margin-top:18px;background:transparent;color:#b85b7b}
+.float-heart{position:fixed;bottom:-30px;font-size:24px;animation:float 6s linear infinite;opacity:.55;z-index:1}
+@keyframes float{to{transform:translateY(-110vh) translateX(80px);opacity:0}}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="heart">😂</div><h1>FINE FINE... 😭</h1>
+<div class="letter"><p><b>Mrs Naaz is always right.</b> ❤️</p>
+<p>WAIT... THIS WAS A TRAP! 😂</p><p>Fine fine... you win. Happy now? 🥺❤️</p></div>
+<a class="btn yes" href="forgiven.html">💕 Okay, now forgive me</a>
+<a class="btn back" href="notyet.html">← Choose another punishment</a>
+</div>
+<div class="float-heart" style="left:10%;animation-delay:0s">♡</div>
+<div class="float-heart" style="left:30%;animation-delay:2s">♡</div>
+<div class="float-heart" style="left:55%;animation-delay:4s">♡</div>
+<div class="float-heart" style="left:80%;animation-delay:1s">♡</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Copy all your image files into this folder. This updated app automatically finds common image formats, whatever the filenames.
